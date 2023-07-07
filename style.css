@@ -325,8 +325,10 @@ nav ul li:nth-child(6) {
 
 .quote-icon {
   position: absolute;
-  top: 89rem;
+  bottom: -58rem;
   left: 8rem;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ------------> ACHIEVEMENT PAGE SECTION <----------- */
@@ -589,14 +591,15 @@ figure {
   .fashion-hmain,
   footer,
   .fashion-main {
-    max-width: 25rem;
+    max-width: 24rem;
   }
 
     .fashion-head {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      max-width: 25rem;
+      margin: 0 auto;
+      justify-content: center;
     }
 
   #figure {
