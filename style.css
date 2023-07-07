@@ -1,0 +1,626 @@
+:root {
+  --clr-primary: #18191F;
+  --clr-accent-100: #D5FAFC;
+  --clr-accent-400: #2EC5CE;
+  --clr-Btn: #8C30F5;
+  --clr-gray: #D9DBE1;
+  --clr-footer: #0B0D17;
+  --clr-white-text: #FFFFFF;
+  --clr-black-text: var(--clr-primary);
+
+  --ff-primary: 'Manrope', sans-serif;
+  --ff-content: var(--ff-primary);
+
+  --fw-primary: 400;
+  --fw-light: 500;
+  --fw-regular: 600;
+  --fw-semibold: 700;
+  --fw-bold: 800;
+
+  --fs-nav: .875rem;
+  --fs-200: 1rem;
+  --fs-300: 1.125rem;
+  --fs-400: 1.25rem;
+  --fs-500: 1.5rem;
+  --fs-600: 1.75rem;
+  --fs-700: 2.5rem;
+  --fs-800: 3rem;
+  --fs-lg: 4.5rem;
+
+  --flh-nav: var(--fs-400);
+  --flh-200: 1.5rem;
+  --flh-300: 1.625rem;
+  --flh-400: var(--fs-600);
+  --flh-500: 1.875rem;
+  --flh-600: 2rem;
+  --flh-700: var(--fs-700);
+  --flh-800: 3.375rem;
+  --flh-900: 4rem;
+  --flh-lg: 6.125rem;
+
+}
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and Inherit fonts */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'],
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* TYPOGRAPHY */
+
+.clr-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+
+.clr-accent-100 {
+  background-color: var(--clr-accent-100);
+}
+
+.clr-btn {
+  background-color: var(--clr-Btn);
+
+}
+
+.clr-footer {
+  background-color: var(--clr-footer);
+}
+
+.clr-black {
+  color: var(--clr-black-text);
+}
+
+.clr-primary {
+  background-color: var(--clr-primary);
+}
+
+.clr-white {
+  color: var(--clr-white-text);
+}
+
+.clr-gray {
+  color: var(--clr-gray);
+}
+
+.text-small {
+  font-size: var(--fs-nav);
+  line-height: var(--flh-nav);
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary);
+  font-family: var(--ff-primary);
+
+}
+
+.text-extra-small {
+  font-size: var(--fs-nav);
+  line-height: var(--flh-200);
+  font-weight: var(--fw-primary);
+  font-family: var(--ff-primary);
+}
+
+.text-100 {
+  font-size: var(--fs-200);
+  line-height: var(--flh-300);
+  font-weight: var(--fw-primary);
+  font-family: var(--ff-primary);
+}
+
+.text-200 {
+  font-size: var(--fs-300);
+  line-height: var(--flh-400);
+  font-weight: var(--fw-primary);
+  font-family: var(--ff-primary);
+}
+
+.text-300 {
+  font-size: var(--fs-300);
+  line-height: var(--flh-600);
+  font-weight: var(--fw-primary);
+  font-family: var(--ff-primary);
+}
+
+.text-400 {
+  font-size: var(--fs-400);
+  line-height: var(--flh-500);
+  font-weight: var(--fw-semibold);
+  font-family: var(--ff-primary);
+}
+
+.text-500 {
+  font-size: var(--fs-500);
+  line-height: var(--flh-600);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-primary);
+}
+
+.text-600 {
+  font-size: var(--fs-600);
+  line-height: var(--flh-700);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-primary);
+}
+
+.text-700 {
+  font-size: var(--fs-700);
+  line-height: var(--flh-800);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-primary);
+}
+
+.text-lg {
+  font-size: var(--fs-800);
+  line-height: var(--flh-800);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-primary);
+}
+
+.text-extra-lg {
+  font-size: var(--fs-lg);
+  line-height: var(--flh-lg);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-primary);
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+}
+
+button {
+  padding: 0.85rem;
+  border-radius: 8px;
+  text-align: center;
+  border: none;
+}
+
+/* ------------> FIRST PAGE SECTION <----------- */
+
+/* --> nav bar customize <-- */
+.primary-header {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 65rem;
+  margin-top: 0;
+}
+
+.primary-navigation {
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+}
+
+.hero-logo {
+  margin: 2rem;
+}
+
+nav ul li:nth-child(6) {
+  padding-right: 8rem;
+
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+/* --> home content customize <-- */
+.home-container {
+  flex-wrap: wrap;
+}
+
+.home-main-content {
+  width: 40rem;
+  margin-top: 5rem;
+}
+
+.home-main-content button {
+  margin-top: 1rem;
+}
+
+/* ------------> FEACTURES PAGE SECTION <----------- */
+
+.feature-wrap {
+  margin: 0 auto;
+  max-width: 32rem;
+  text-align: center;
+  padding: 7rem 0 3rem 0;
+}
+
+.box1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 20rem;
+}
+
+.feacture-main {
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+}
+
+/* ------------> TESTIMONIAL PAGE SECTION <----------- */
+
+.testimonial-container h2 {
+  max-width: 25rem;
+  padding-bottom: 1rem;
+}
+
+.testimonial-wrap {
+  flex-wrap: wrap;
+  position: relative;
+  gap: 0;
+  padding: 5rem 0 0 5rem;
+}
+
+.textimonial3 {
+  padding-left: 2.5rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 89rem;
+  left: 8rem;
+}
+
+/* ------------> ACHIEVEMENT PAGE SECTION <----------- */
+
+#achievement-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 3rem;
+  margin: 2rem 0 4rem 0;
+}
+
+.achievement-hheader {
+  width: 30rem;
+
+}
+
+.achievement-haside {
+  display: flex;
+  width: 30rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.achievement-mainc {
+  width: 30rem;
+}
+
+.achievement-box {
+  display: flex;
+  width: 13.93rem;
+}
+
+.achieve-icon1 {
+  margin: 0.5em 0.8em 0 0;
+}
+
+.achievement-main {
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.achievement-mainAside {
+  width: 30rem;
+  padding: 2rem;
+}
+
+/* -------------> FASHION SECTION <-------------*/
+
+.fashion-head {
+  gap: 0;
+}
+
+.fashion-hmain {
+  width: 30rem;
+}
+
+.fashion-haside {
+  width: 33rem;
+  padding-left: 1rem;
+}
+
+.fashion-main {
+  max-width: 63rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ------------> FOOTER PAGE SECTION <----------- */
+/* figure section */
+figure {
+  position: relative;
+  min-height: 31.1rem;
+}
+
+.figure-main {
+  max-width: 30rem;
+  margin-top: 5rem;
+}
+
+.figure-aside {
+  width: 30rem;
+}
+
+.fm1 {
+  padding-top: 0.3rem;
+  padding-bottom: 2rem;
+}
+
+.download-badge {
+  justify-content: flex-start;
+  padding-top: 0.4rem;
+
+}
+
+.phone-mookup1 {
+  position: absolute;
+}
+
+.phone-mookup2 {
+  position: relative;
+  left: 15rem;
+  top: 5rem;
+
+}
+
+/* black footer */
+
+.footer-main {
+  width: 30rem;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-aside {
+  flex-direction: column;
+  justify-content: end;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  width: 1.5rem;
+}
+
+.footer-main a {
+  padding: 0.5rem;
+}
+
+/* ---------------> TABLET VIEW PORT <---------- */
+
+@media only screen and (max-width: 780px) {
+
+  nav ul li:nth-child(6) {
+    padding-right: 5px;
+  }
+
+  .primary-header {
+    align-items: center;
+    margin-top: -2rem;
+  }
+
+  .primary-navigation {
+    margin-top: 4rem;
+    justify-content: center;
+  }
+
+  .phone-mookup1,
+  .phone-mookup2 {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 30rem) {
+
+  /* --> TYPOGRAPHY <-- */
+  :root {
+    --fs-lg: var(--fs-700);
+    --fs-600: var(--fs-500);
+    --fs-500: var(--fs-400);
+    --fs-400: var(--fs-300);
+    --fs-300: var(--fs-200);
+    --fs-200: var(--fs-100);
+  }
+
+  section {
+    padding: 0 0.4rem;
+  }
+
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 35%;
+    flex-direction: column;
+    background-color: #2ec6ce9a;
+    backdrop-filter: blur(10px);
+    margin-top: 0;
+    transform: translateX(100%);
+    transition: transform 350ms ease-in-out;
+    z-index: 999;
+  }
+
+  .primary-navigation a {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-200);
+    color: var(--clr-footer);
+  }
+
+  .primary-navigation[data-visible='true'] {
+    transform: translateX(0%);
+  }
+
+  .mobile-toggle {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg);
+    background-repeat: no-repeat;
+    border: none;
+    width: 1rem;
+    aspect-ratio: 1;
+    top: 1rem;
+    right: 2rem;
+    z-index: 9999;
+  }
+
+  .mobile-toggle[aria-expanded='true'] {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/ce/Black_close_x.svg);
+    width: 0.9rem;
+    aspect-ratio: 1;
+  }
+
+  nav ul li:nth-child(6) {
+    padding-right: 0;
+  }
+
+  .hero-logo {
+    margin-top: 3rem;
+  }
+
+  .home-main-content {
+    text-align: center;
+  }
+
+  .quote-icon {
+    display: none;
+  }
+
+  .achievement-hheader {
+    text-align: center;
+  }
+
+  .achievement-box h4 {
+    font-size: var(--fs-600);
+    line-height: var(--flh-400);
+    font-weight: var(--fw-bold);
+  }
+
+  .achievement-box p {
+    line-height: var(--flh-200);
+    font-weight: var(--fw-light);
+  }
+
+  .achievement-haside {
+    gap: 2rem;
+    margin-inline-start: 0.4rem;
+  }
+
+  .achievement-box {
+    width: 11rem;
+  }
+
+  .fashion-haside,
+  .fashion-hmain,
+  footer,
+  .fashion-main {
+    max-width: 25rem;
+  }
+
+    .fashion-head {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 25rem;
+    }
+
+  #figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 25rem;
+  }
+
+  .figure-main {
+    margin-top: -4rem;
+    margin-bottom: -4rem;
+  }
+
+  .figure-main p {
+    padding: 0.3rem 1rem;
+  }
+
+  .download-badge {
+    justify-content: center;
+  }
+
+  .phone-mookup1,
+  .phone-mookup2 {
+    display: none;
+  }
+
+
+}
