@@ -484,7 +484,7 @@ figure {
 
 }
 
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 30rem){
 
   /* --> TYPOGRAPHY <-- */
   :root {
@@ -574,12 +574,15 @@ figure {
   }
 
   .achievement-haside {
-    gap: 2rem;
-    margin-inline-start: 0.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto;
   }
 
   .achievement-box {
-    width: 11rem;
+   max-width: 9.5rem;
+
   }
 
   .fashion-haside,
