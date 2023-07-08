@@ -54,6 +54,7 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -73,6 +74,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -272,15 +274,21 @@ nav ul li:nth-child(6) {
 /* --> home content customize <-- */
 .home-container {
   flex-wrap: wrap;
+  /* max-width: 60rem; */
+  padding-left: clamp(0.7rem, 5%, 0rem)
 }
 
 .home-main-content {
-  width: 40rem;
+  max-width: 40rem;
   margin-top: 5rem;
 }
 
 .home-main-content button {
   margin-top: 1rem;
+}
+
+.home-aside-content {
+  max-width: 17rem;
 }
 
 /* ------------> FEACTURES PAGE SECTION <----------- */
@@ -338,29 +346,28 @@ nav ul li:nth-child(6) {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  gap: 3rem;
+  gap: clamp(0.5rem, 5%, 2rem);
   margin: 2rem 0 4rem 0;
+  border: 2px solid red;
+  padding-left: clamp(0.3rem, 5%, 0.5rem);
 }
 
 .achievement-hheader {
-  width: 30rem;
+  max-width: 30rem;
 
 }
 
 .achievement-haside {
   display: flex;
-  width: 30rem;
+  max-width: 30rem;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.achievement-mainc {
-  width: 30rem;
-}
-
 .achievement-box {
   display: flex;
-  width: 13.93rem;
+  width: 13.93em;
+  border: 1px solid yellow;
 }
 
 .achieve-icon1 {
@@ -369,16 +376,24 @@ nav ul li:nth-child(6) {
 
 .achievement-main {
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: clamp(0.5rem, 5%, 2rem);
+  padding-left: clamp(0.3rem, 5%, 0.5rem);
   margin: 3rem 0;
 }
 
+.achievement-mainc {
+  max-width: clamp(25rem, 100%, 30rem);
+}
+
 .achievement-mainAside {
-  width: 30rem;
+  max-width: 30rem;
   padding: 2rem;
 }
 
 /* -------------> FASHION SECTION <-------------*/
+#fashion-section {
+  padding-left: clamp(0.3rem, 5%, 0.5rem);
+}
 
 .fashion-head {
   gap: 0;
@@ -404,15 +419,19 @@ nav ul li:nth-child(6) {
 figure {
   position: relative;
   min-height: 31.1rem;
+  flex-wrap: wrap;
+
 }
 
 .figure-main {
   max-width: 30rem;
   margin-top: 5rem;
+  padding-left: clamp(0.3rem, 5%, 0.5rem);
 }
 
 .figure-aside {
-  width: 30rem;
+  width: clamp(10rem, 100%, 30rem);
+  outline: 3px solid red;
 }
 
 .fm1 {
@@ -428,13 +447,13 @@ figure {
 
 .phone-mookup1 {
   position: absolute;
+  width: 18rem; 
 }
 
 .phone-mookup2 {
   position: relative;
   left: 15rem;
   top: 5rem;
-
 }
 
 /* black footer */
@@ -486,7 +505,7 @@ figure {
 
 }
 
-@media only screen and (max-width: 30rem){
+@media only screen and (max-width: 30rem) {
 
   /* --> TYPOGRAPHY <-- */
   :root {
@@ -496,6 +515,10 @@ figure {
     --fs-400: var(--fs-300);
     --fs-300: var(--fs-200);
     --fs-200: var(--fs-100);
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   section {
@@ -583,7 +606,7 @@ figure {
   }
 
   .achievement-box {
-   max-width: 9.5rem;
+    max-width: 9.5rem;
 
   }
 
@@ -594,13 +617,13 @@ figure {
     max-width: 24rem;
   }
 
-    .fashion-head {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: 0 auto;
-      justify-content: center;
-    }
+  .fashion-head {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+  }
 
   #figure {
     display: flex;

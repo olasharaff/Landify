@@ -9,7 +9,7 @@ image.forEach((e) => {
 
 const primaryNav = document.querySelector('.primary-navigation');
 const toggleButton = document.querySelector('.mobile-toggle');
-
+const navList = document.querySelectorAll('a')
 toggleButton.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible');
     const expanded = toggleButton.getAttribute('data-expanded');
@@ -27,3 +27,8 @@ toggleButton.addEventListener('click', () => {
 
    
 })
+//  navList.forEach((link) => {
+//     link.addEventListener('click',()=> {
+//         primaryNav.style.transition = '10s ease-in-out'
+//     })
+//  })
