@@ -348,7 +348,6 @@ nav ul li:nth-child(6) {
   margin: 0 auto;
   gap: clamp(0.5rem, 5%, 2rem);
   margin: 2rem 0 4rem 0;
-  border: 2px solid red;
   padding-left: clamp(0.3rem, 5%, 0.5rem);
 }
 
@@ -367,7 +366,6 @@ nav ul li:nth-child(6) {
 .achievement-box {
   display: flex;
   width: 13.93em;
-  border: 1px solid yellow;
 }
 
 .achieve-icon1 {
@@ -418,7 +416,7 @@ nav ul li:nth-child(6) {
 /* figure section */
 figure {
   position: relative;
-  min-height: 31.1rem;
+  height: 71.5vh;
   flex-wrap: wrap;
 
 }
@@ -431,7 +429,6 @@ figure {
 
 .figure-aside {
   width: clamp(10rem, 100%, 30rem);
-  outline: 3px solid red;
 }
 
 .fm1 {
@@ -454,6 +451,7 @@ figure {
   position: relative;
   left: 15rem;
   top: 5rem;
+  
 }
 
 /* black footer */
@@ -463,6 +461,7 @@ figure {
   flex-direction: column;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding-left: clamp(0.3rem, 5%, 0rem);
 }
 
 .footer-aside {
@@ -470,6 +469,7 @@ figure {
   justify-content: end;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  padding-right: clamp(0.3rem, 5%, 0rem);
 }
 
 .footer-logo {
@@ -481,7 +481,25 @@ figure {
 }
 
 /* ---------------> TABLET VIEW PORT <---------- */
+@media only screen and (max-width: 964px) {
+  .figure-aside, .quote-icon{
+    display: none;
 
+  }
+  .feauture-imag{
+    padding:0rem clamp(0.6rem, 5%, 0rem);
+  }
+  .figure-main{
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0rem clamp(0.8rem, 5%, 0rem);
+  }
+  
+  
+}
 @media only screen and (max-width: 780px) {
 
   nav ul li:nth-child(6) {
